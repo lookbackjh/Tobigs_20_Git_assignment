@@ -1,7 +1,7 @@
 import time, json, os, sys
 
 sys.tracebacklimit = 0 # traceback을 띄우지 않음
-WAITTIME = 2
+WAITTIME = 0
 NUM_PLAYERS = len(os.listdir())
 
 class MissonNotFinishError(Exception):
@@ -20,11 +20,21 @@ def greeting():
 def nameCheck():
     global players # 전역 변수 생성
     players = []
-
+    #print(os.getcwd())
     for i in range(1, NUM_PLAYERS): # 플레이어 5명을 players 배열에 담슴니다.
         try:
-            with open("player" + str(i) + "/profile.json", "r", encoding='utf-8') as f:
+            with open("player" + str(i) + "\profile.json", "r", encoding='utf-8') as f:
                 data = json.load(f)
                 if(data["닉네임"] == "[여기에 별명을 적어주세요]" or data["한마디"] == "[투빅스 20기에 임하는 각오 한 마디 적어 주세요!]"): # 모두의 파일이 작성되지 않음
                     time.sleep(WAITTIME)
+                    print("플레이어 " + str(i) + "님의 파일이 없습니다. 파일을 확인해주세요.")
+                else:
+                    print("플레이어 " + str(i) + "님: "+ data["닉네임"] + " (" + data["한마디"] + ")")
 
+        except:
+            time.sleep(WAITTIME)
+            
+
+
+
+nameCheck()
