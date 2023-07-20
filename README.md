@@ -30,8 +30,8 @@ group5: 조민영 주세현 최태은 황민정 황태연
 2. 각 팀별 폴더 안에 포함된 `main.py` 를 실행시킵니다 : `python3 main.py`
 3. 프로그램 실행 결과를 확인하여 수정할 파일을 확인합니다.
 4. 자신의 플레이어 번호 폴더의 파일을 수정합니다. : `group1/player1/profile.json` 을 수정
-5. 각자 수정이 완료되면 `git add .`, `git commit -m "프로필 수정"` `git push origin master` 을 통해 팀장의 저장소에 푸시합니다.
-6. 모두가 수정이 완료되면,  `git pull origin master` 를 통해 수정 사항을 불러옵니다.
+5. 각자 수정이 완료되면 `git add .`, `git commit -m "프로필 수정"` `git push origin main` 을 통해 팀장의 저장소에 푸시합니다.
+6. 모두가 수정이 완료되면,  `git pull origin main` 를 통해 수정 사항을 불러옵니다.
 7. 다시 'main.py'과제가 완료되었다는 메시지를 확인하면 과제 끝!
 8. 변경사항이 있는 경우 다시 저장소에 푸시합니다.
 9. 팀의 `github 저장소` 를 이 프로젝트에 `pull request` 합니다. (선택사항)
